@@ -1,0 +1,39 @@
+{
+  "name": "@myetherwallet/dai-plugin-mewconnect",
+  "version": "0.0.1",
+  "description": "A dai.js plugin for MEWconnect",
+  "main": "src/index.js",
+  "devDependencies": {
+    "@myetherwallet/mewconnect-web-client": "file:../../MEWconnect-web-client",
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.4.5",
+    "@babel/node": "^7.2.2",
+    "@babel/plugin-transform-runtime": "^7.3.4",
+    "@babel/preset-env": "^7.4.5",
+    "@makerdao/testchain": "^0.2.12",
+    "husky": "^0.14.3",
+    "babel-jest": "^24.8.0",
+    "eslint": "^5.15.1",
+    "jest": "^24.5.0",
+    "lint-staged": "^7.1.0",
+    "prettier": "^1.12.1",
+    "webpack": "^4.39.3"
+  },
+  "dependencies": {
+    "@makerdao/currency": "^0.9.5",
+    "@makerdao/dai": "^0.18.4",
+    "@makerdao/services-core": "^0.9.9"
+  },
+  "lint-staged": {
+    "*.{js,json}": [
+      "prettier --write --single-quote",
+      "git add"
+    ]
+  },
+  "scripts": {
+    "test": "",
+    "precommit": "lint-staged",
+    "build": "./scripts/build.sh"
+  },
+  "license": "MIT"
+}
